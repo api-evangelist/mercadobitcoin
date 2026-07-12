@@ -23,6 +23,8 @@ apis:
       - type: Documentation
         url: https://www.mercadobitcoin.com.br/api-doc/
 common:
+  - type: DomainSecurity
+    url: security/mercadobitcoin-domain-security.yml
   - type: Website
     url: https://www.mercadobitcoin.com.br/api-doc/
   - type: PublicAPIsListing
