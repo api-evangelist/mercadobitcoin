@@ -25,7 +25,37 @@ edges:
     - payments-recurring-consents-automatic
     detected_by: sweep-standard-registers.py
     detected: '2026-10-12'
+- partner_name: CCXT
+  partner: null
+  partner_match: null
+  type: coverage
+  channel: open-source-node
+  relationship: connector-coverage
+  direction: partner-built
+  evidence: https://github.com/ccxt/ccxt/blob/master/ts/src/mercado.ts
+  ccxt_id: mercado
+  ccxt_certified: null
+  ccxt_pro: null
+  matched_by: domain:mercadobitcoin.com.br
+  partner_gap: no ccxt repo in all/* (catalog gap)
+  detected_by: sweep-crypto.py
+  first_seen: '2026-10-13'
+- partner_name: CoinGecko
+  partner: coingecko
+  partner_match: aggregator
+  channel: partner-built
+  direction: partner-built
+  type: coverage
+  relationship: connector-coverage
+  evidence: https://api.coingecko.com/api/v3/exchanges/mercado_bitcoin
+  matched_by: domain:mercadobitcoin.com.br
+  coingecko_id: mercado_bitcoin
+  trust_score: 5
+  detected_by: sweep-crypto.py
+  first_seen: '2026-10-13'
 generated: '2026-10-12'
 method: searched
 checked:
+- https://api.coingecko.com/api/v3/exchanges
 - https://data.directory.openbankingbrasil.org.br/participants
+- https://raw.githubusercontent.com/ccxt/ccxt/master/exchanges.json
