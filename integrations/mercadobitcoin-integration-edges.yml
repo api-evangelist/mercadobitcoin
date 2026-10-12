@@ -1,0 +1,31 @@
+edges:
+- partner_name: Open Finance Brasil
+  partner: null
+  type: contract
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://data.directory.openbankingbrasil.org.br/participants
+  contract_reference:
+    register: Open Finance Brasil directory (Banco Central do Brasil)
+    spec_file: null
+    role: participant
+    registered_name: MERCADO BITCOIN INSTITUICAO DE PAGAMENTO LTDA
+    register_id: a073c729-533f-43bc-a02c-976b65ceb4c9
+    matched_domain: mercadobitcoin.com.br
+    api_families:
+    - admin
+    - discovery_outages
+    - discovery_status
+    - payments-consents
+    - payments-pix
+    - payments-pix-recurring-payments
+    - payments-pix-recurring-payments-automatic
+    - payments-recurring-consents
+    - payments-recurring-consents-automatic
+    detected_by: sweep-standard-registers.py
+    detected: '2026-10-12'
+generated: '2026-10-12'
+method: searched
+checked:
+- https://data.directory.openbankingbrasil.org.br/participants
