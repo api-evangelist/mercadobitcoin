@@ -50,7 +50,7 @@ edges:
   evidence: https://api.coingecko.com/api/v3/exchanges/mercado_bitcoin
   matched_by: domain:mercadobitcoin.com.br
   coingecko_id: mercado_bitcoin
-  trust_score: 5
+  trust_score: 4
   detected_by: sweep-crypto.py
   first_seen: '2026-10-13'
 generated: '2026-10-12'
