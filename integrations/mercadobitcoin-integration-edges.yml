@@ -39,7 +39,7 @@ edges:
   matched_by: domain:mercadobitcoin.com.br
   partner_gap: no ccxt repo in all/* (catalog gap)
   detected_by: sweep-crypto.py
-  first_seen: '2026-10-13'
+  first_seen: '2026-10-14'
 - partner_name: CoinGecko
   partner: coingecko
   partner_match: aggregator
@@ -52,7 +52,7 @@ edges:
   coingecko_id: mercado_bitcoin
   trust_score: 4
   detected_by: sweep-crypto.py
-  first_seen: '2026-10-13'
+  first_seen: '2026-10-14'
 generated: '2026-10-12'
 method: searched
 checked:
