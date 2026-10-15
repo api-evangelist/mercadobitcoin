@@ -53,9 +53,87 @@ edges:
     - payments-recurring-consents-automatic
     detected_by: sweep-standard-registers.py
     detected: '2026-10-14'
+- partner_name: Open Finance Brasil functional certification
+  partner: null
+  partner_match: register
+  type: register
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://data.directory.openbankingbrasil.org.br/participants
+  category: open finance conformance (Brazil)
+  contract_reference:
+    register: Open Finance Brasil directory, per-family CertificationStatus (submissions in github.com/OpenBanking-Brasil/conformance)
+    spec_file: null
+    standard: Open Finance Brasil
+    role: certified-participant
+    registrations:
+    - registered_name: MERCADO BITCOIN INSTITUICAO DE PAGAMENTO LTDA
+      register_id: a073c729-533f-43bc-a02c-976b65ceb4c9
+      cnpj: '11351086000113'
+      matched_domain: mercadobitcoin.com.br
+      matched_by: domain
+    certified_products:
+    - product: payments
+      families:
+      - payments-consents
+      - payments-pix
+      status: Self-Certified
+      expires: '2027-05-20'
+      certification_uri: https://github.com/OpenBanking-Brasil/conformance/blob/main/submissions/functional/payments/5.0.0/11351086_MERCADOBITCOIN_PAYMENTS_V5_payments_v5.0_19-05-2026.json
+    - product: recurring-payments
+      families:
+      - payments-pix-recurring-payments
+      - payments-pix-recurring-payments-automatic
+      - payments-recurring-consents
+      - payments-recurring-consents-automatic
+      status: Self-Certified
+      expires: '2026-11-03'
+      certification_uri: https://github.com/OpenBanking-Brasil/conformance/blob/main/submissions/functional/automatic-payments/2.0.0/11351086_5.0_automatic-payments_v2.0.0_23-04-2025.json
+    signal_note: one entry per PRODUCT TYPE, lapsed flagged; family counts are context, never read
+    detected_by: sweep-latam-open-finance.py
+    detected: '2026-10-15'
+  detected_by: sweep-latam-open-finance.py
+  first_seen: '2026-10-15'
+- partner_name: Pix (Banco Central do Brasil)
+  partner: null
+  partner_match: register
+  type: register
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.bcb.gov.br/estabilidadefinanceira/participantespix
+  category: instant payments (Brazil)
+  contract_reference:
+    register: Pix participants (Banco Central do Brasil, https://www.bcb.gov.br/content/estabilidadefinanceira/participantes_pix/lista-participantes-instituicoes-em-adesao-pix-20261015.csv)
+    spec_file: null
+    standard: Pix
+    role: pix-participant
+    registrations:
+    - registered_name: MERCADO BITCOIN IP LTDA
+      ispb: '11351086'
+      cnpj: 11.351.086/0001-13
+      institution_type: Instituição de Pagamento
+      spi_participation: Indireta
+      pix_participation: Facultativa
+      pix_modality: Provedor de Conta Transacional
+      payment_initiation: false
+      matched_domain: mercadobitcoin.com.br
+      matched_by: domain
+      identity: Open Finance Brasil directory, same CNPJ 11351086000113 ('MERCADO BITCOIN INSTITUICAO DE PAGAMENTO
+        LTDA')
+    signal_note: 'participation only: the domain comes from a labelled lookup (registrations[].identity)'
+    detected_by: sweep-latam-open-finance.py
+    detected: '2026-10-15'
+  detected_by: sweep-latam-open-finance.py
+  first_seen: '2026-10-15'
 generated: '2026-10-12'
 method: searched
 checked:
 - https://api.coingecko.com/api/v3/exchanges
 - https://data.directory.openbankingbrasil.org.br/participants
 - https://raw.githubusercontent.com/ccxt/ccxt/master/exchanges.json
+- https://www.bcb.gov.br/estabilidadefinanceira/participantespix
+source:
+- https://data.directory.openbankingbrasil.org.br/participants
+- https://www.bcb.gov.br/estabilidadefinanceira/participantespix
